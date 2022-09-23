@@ -1,0 +1,22 @@
+// Taking input with Buffered Reader
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+class Main {
+	// Throws IOException
+    public static void main(String[] args) throws IOException {
+    // Create Input Stream Reader instance and pass standard input object
+    // Create Buffered Readrer instance for taking input and pass InputStreamReadrer
+    InputStreamReader i = new InputStreamReader(System.in);
+    BufferedReader b = new BufferedReader(i);
+	int num = Integer.parseInt(b.readLine()); // Reading integer
+    String s1 = b.readLine(); // Reading string
+	String s2 = b.readLine();
+	char ch = b.readLine().charAt(0); // Reading character
+	System.out.println(num);
+	System.out.println(s1);
+	System.out.println(s2);
+	System.out.println(ch);
+    b.close();
+    }
+}
